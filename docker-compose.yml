@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  mariadb:
+    image: mariadb:10.1
+    hostname: mariadb
+    volumes:
+      - ./mariadb:/var/lib/mysql
+      - ./migrations:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
+    environment:
+      - TZ=Asia/Bangkok
+      - MYSQL_ROOT_PASSWORD=p@ssWoRD
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    hostname: phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=mariadb
