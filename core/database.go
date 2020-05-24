@@ -16,11 +16,18 @@ type Database struct {
 }
 
 func NewDatabase() *Database {
+	//return &Database{
+	//	Name:     "cooking_server",
+	//	Host:     "localhost",
+	//	User:     "root",
+	//	Password: "p@ssWoRD",
+	//	Port:     "3306",
+	//}
 	return &Database{
-		Name:     "cooking_server",
-		Host:     "localhost",
-		User:     "root",
-		Password: "p@ssWoRD",
+		Name:     "uegx4ha0z34ixkkb",
+		Host:     "pqxt96p7ysz6rn1f.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+		User:     "mcja6qsisx9uq9ok",
+		Password: "p2gn9vpq653ughuu",
 		Port:     "3306",
 	}
 }
